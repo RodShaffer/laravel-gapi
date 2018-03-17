@@ -1,0 +1,43 @@
+{
+    "name": "rodshaffer/laravel-gapi",
+    "description": "Laravel package to easily add Google API to your Laravel 4 / 5 project",
+    "keywords": ["rodshaffer", "google-api", "Google API", "Laravel", "Laravel 4", "Laravel 5"],
+    "homepage": "https://github.com/RodShaffer/laravel-gapi",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Rod Shaffer",
+            "email": "htmlplus43@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "illuminate/support": "~5",
+        "google/apiclient": "^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.6.0",
+        "phpunit/phpunit": "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RodShaffer\\GoogleApi\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RodShaffer\\GoogleApi\\Providers\\GoogleApiServiceProvider"
+            ],
+            "aliases": {
+                "GoogleService": "RodShaffer\\GoogleApi\\Facades\\GoogleService"
+            }
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
