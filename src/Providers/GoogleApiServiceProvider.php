@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use RodShaffer\GoogleApi\Services\GoogleService;
 
 /**
- * Class GoogleApiServiceProvider the Laravel Google API service provider
+ * Class GoogleApiServiceProvider Laravel Google API service provider
  * @package RodShaffer\GoogleApi\Providers
  */
 class GoogleApiServiceProvider extends ServiceProvider
@@ -14,6 +14,7 @@ class GoogleApiServiceProvider extends ServiceProvider
     /**
      * Configuration file path.
      */
+
     const CONFIG_PATH = __DIR__ . '/../config/config.php';
 
     /**
@@ -44,6 +45,7 @@ class GoogleApiServiceProvider extends ServiceProvider
     {
 
         $this->app->bind('GoogleService', 'RodShaffer\GoogleApi\Services\GoogleService');
+
 
         $this->app->singleton('GoogleService', function () {
             return $this->app->make('RodShaffer\GoogleApi\Services\GoogleService');
