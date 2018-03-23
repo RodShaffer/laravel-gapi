@@ -21,7 +21,7 @@ class GoogleService implements Google
     }
 
     /**
-     * Get a Google_Client instance
+     * Get a Google_Client instance supports JSON credentials
      *
      * @param array $config
      * @return Google_Client
